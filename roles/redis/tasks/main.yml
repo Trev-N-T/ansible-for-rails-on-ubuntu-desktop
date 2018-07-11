@@ -1,0 +1,19 @@
+- name: install redis
+  become: yes
+  become_user: root
+  apt:
+    name: redis-server
+    state: latest
+    update_cache: yes
+  tags:
+      - redis
+
+- name: start redis
+  become: yes
+  become_user: root
+  service:
+    name: redis-server
+    state: started
+    enabled: yes
+  tags:
+    - redis

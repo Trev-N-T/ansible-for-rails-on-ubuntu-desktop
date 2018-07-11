@@ -1,0 +1,4 @@
+general_required_packages:
+  - vim
+  - build-essential
+  - silversearcher-ag
